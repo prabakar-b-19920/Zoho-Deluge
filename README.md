@@ -3,6 +3,7 @@
 ## Update one field from another field (same module)
 
 Use this Deluge custom function to copy a value from a source field to a target field in the same module record.
+Replace `Source_Field_API_Name` and `Target_Field_API_Name` with your actual CRM field API names.
 
 ```deluge
 module_name = "Leads";

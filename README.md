@@ -12,7 +12,8 @@ module_name = "Leads";
 record_id = input.recordId.toLong();
 
 record_data = zoho.crm.getRecordById(module_name, record_id);
-source_value = ifnull(record_data.get("Source_Field_API_Name"), "");
+fallback_value = ""; // For text fields. Use 0 for number fields, etc.
+source_value = ifnull(record_data.get("Source_Field_API_Name"), fallback_value);
 
 update_map = Map();
 update_map.put("Target_Field_API_Name", source_value);

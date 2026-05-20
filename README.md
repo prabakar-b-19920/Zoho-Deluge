@@ -4,6 +4,8 @@
 
 Use this Deluge custom function to copy a value from a source field to a target field in the same module record.
 Replace `Source_Field_API_Name` and `Target_Field_API_Name` with your actual CRM field API names.
+Update `module_name` and `record_id` assignment based on where the function runs (workflow, custom button, or another trigger).
+Choose an `ifnull` fallback value that matches your target field type (for example, `0` for number fields).
 
 ```deluge
 module_name = "Leads";
